@@ -1,0 +1,20 @@
+CREATE TABLE users (
+id INT NOT NULL AUTO_INCREMENT, first_name varchar(255), last_name varchar(255), email varchar(255), password varchar(255), PRIMARY KEY (id)
+);
+
+
+SELECT *
+FROM users
+
+INSERT INTO users (first_name, last_name, email, password )
+VALUES ("tom","smith","tom@smith.com");
+
+
+INSERT INTO users (first_name, last_name, email, password )
+VALUES ("ron","mckee","ron@mckee.com");
+
+INSERT INTO users (first_name, last_name, email, password )
+VALUES ("pat","lundy","pat@lundy.com");
+
+SELECT *
+FROM users

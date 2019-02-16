@@ -1,0 +1,61 @@
+<html>
+    <head>
+       <title>Form</title>
+    </head>
+    <body>
+        <meta charset+"utf-8">
+        <title>Dojo Survey Index</title>
+        <!-- linking a css style sheet -->
+        <!-- <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/my_style_sheet.css') }}"> -->
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/my_style_sheet.css') }}">
+
+        {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                <ul class=flashes>
+                    {% for category, message in messages %}
+                        <li class="{{ category }}">{{ message }}</li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
+        {% endwith %}
+        
+        <h3>Register:</h3>
+        <form action='/process/register' method='post'>
+            <div>
+                First Name: <input type='text' name='first_name'>
+            </div>
+            <div>
+                Last Name: <input type='text' name='last_name'>
+            </div>
+            <div>
+                Email: <input type='email' name='email'>
+            </div>
+            <div>
+                Password: <input type='password' name='password'>
+            </div>
+            <div>
+                Confirm Password: <input type='password' name='con_password'>
+            </div>
+            </div>
+                <input type='submit' value='Submit'>
+            </div>
+        </form>
+        <h3> Login: </h3>
+        <form action='/process/login' method='post'>
+            <div>
+                Email: <input type='email' name='email'>
+            </div>
+            <div>
+                Password: <input type='password' name='password'>
+            </div>
+            <div>
+                Confirm Password: <input type='password' name='con_password'>
+            </div>
+            </div>
+                <input type='submit' value='Submit'>
+            </div>
+        </form>
+    </body>
+</html>
+
+ 
