@@ -3,7 +3,7 @@
   <title>Email</title>
 </head>
 <body>
-    <h4>Coding Dojo Wall Welcome {{session['first_name']}}! logoff</h4>
+    <h4>Welcome to the Wall {{session['first_name']}}! logoff</h4>
 
     <form action='/processMessage' method='POST'>
       <label for="message">Post a message:<input type="text" name="message" id="message"></label>
